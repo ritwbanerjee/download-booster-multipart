@@ -1,0 +1,42 @@
+<div class="container">
+  <h2 class="title"> Sample Download Booster</h2>
+  <p class="note"> * Not Supporting CORS at the moment * </p>
+
+  <section class="download-form">
+    <div class="input-group mb-3">
+      <button
+      type="button"
+      class="btn btn-primary"
+      tooltip="URL as mentioned in the coding requirements: {{defaultFileUrl}}"
+      placement="bottom" (click)="download('default')">{{ downloadButtonText }}</button>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">{{ fileUrlInputLabel }}</span>
+      </div>
+      <input type="text" class="form-control" [formControl]="url" attr.aria-label="{{ fileUrlInputLabel }}" required>
+    </div>
+
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">{{ fileNameInputLabel }}</span>
+      </div>
+      <input type="text" class="form-control" [formControl]="fileName" attr.aria-label="{{ fileNameInputLabel }}">
+    </div>
+
+    <div class="input-group mb-3">
+      <button
+      type="button"
+      class="btn btn-primary"
+      tooltip="URL as mentioned in the coding requirements: {{defaultFileUrl}}"
+      placement="top" (click)="download()"
+      [disabled]="!enableDownloadButton">{{ downloadText }}</button>
+    </div>
+  </section>
+</div>
+
+
+
+<app-part-download [data]="downloadInput"></app-part-download>

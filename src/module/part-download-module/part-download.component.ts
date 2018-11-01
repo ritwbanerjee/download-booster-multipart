@@ -17,7 +17,6 @@ export class PartDownloadComponent implements OnChanges {
   ) {}
 
   ngOnChanges() {
-    console.log('data: ', this.data);
     if (this.data) {
       this.partDownload.downloadFile(
         this.data.url,

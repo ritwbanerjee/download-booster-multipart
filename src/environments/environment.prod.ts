@@ -3,12 +3,13 @@ export const environment = {
 };
 
 export const config = {
+  checkHead: 'http://localhost:4000/getHead',
   defaultFilename: 'untitled',
-  downloadButtonText: 'Click To Download 384MB.jar !',
+  downloadButtonText: 'Test Download 384MB.jar !',
   downloadText: 'Download',
   fileDownloadUrl: 'http://f39bf6aa.bwtest-aws.pravala.com/384MB.jar',
-  fileNameInputLabel: 'Enter File Name',
-  fileUrlInputLabel: 'Enter URL to download',
+  fileNameInputLabel: 'File Name',
+  fileUrlInputLabel: 'URL',
   maxDownloadableBytes: 400000,
   totalChunkSize: 4
 };

@@ -47,6 +47,7 @@ export class AppComponent implements OnInit {
 
   download(type: string) {
 
+    // type object is passed by the default case download button. For manual entry, type is missing hence the else block will fire
     if (type) {
       this.downloadInput = new PartDownloadModel(
         this.defaultFileUrl,
@@ -62,7 +63,6 @@ export class AppComponent implements OnInit {
         config.totalChunkSize,
         config.maxDownloadableBytes);
     }
-      console.log('downloadInput: ', this.downloadInput);
   }
 
   checkToEnableButton() {

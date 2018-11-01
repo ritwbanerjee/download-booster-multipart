@@ -48,13 +48,7 @@ export class PartDownloadService {
         this.fileType = `${res['content-type']};charset=utf-8`;
         this.isMultipartPossible = res['accept-ranges'] === 'bytes';
       } catch (e) {}
-
-      console.log('File Size: ', this.fileSize);
-      console.log('File Type: ', this.fileType);
-      console.log('Multipart: ', this.isMultipartPossible);
-
       (this.isMultipartPossible) ? this.multipart() : this.monoPart();
-
     });
   }
 
